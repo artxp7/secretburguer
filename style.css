@@ -1,0 +1,267 @@
+/* ======= ESTILO GERAL ======= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0f;
+  color: white;
+}
+img {
+  width: 250px; /* Largura padrão */
+  height: 250px; /* Altura padrão */
+  object-fit: cover; /* Corta e preenche proporcionalmente */
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #1a1a2e;
+  box-shadow: 0 0 20px #7300ff;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+header p {
+  color: #ccc;
+  font-size: 1.2em;
+}
+
+header .cart-button {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  background-color: transparent;
+  border: 2px solid #7300ff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+header .cart-button:hover {
+  background-color: #7300ff;
+  color: white;
+}
+
+/* ======= SLIDER ======= */
+.hamburguer-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.burger-card {
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.burger-card img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.burger-card h3 {
+  color: #a200ff;
+  font-size: 25px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #7701ad;
+  cursor: pointer;
+  transition: transform 0.8s;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+/* ======= CARDÁPIO ======= */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.card {
+  background-color: #111122;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #7300ff88;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  color: #ff00ff;
+  font-size: 1.6em;
+  margin: 10px 0;
+}
+
+.card p {
+  color: #ccc;
+}
+
+.card span {
+  display: block;
+  color: #00ffcc;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.card button {
+  background-color: #7300ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.card button:hover {
+  background-color: #00ffcc;
+  color: black;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* ======= CARRINHO LATERAL ======= */
+#sidebar-cart,
+.shadow-cart {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.shadow-cart {
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+  left: 0;
+  z-index: 11;
+  visibility: hidden;
+}
+
+#sidebar-cart.active ~ .shadow-cart {
+  opacity: 1;
+  visibility: visible;
+}
+
+#sidebar-cart {
+  right: 0;
+  background: #1a1a2e;
+  color: white;
+  z-index: 12;
+  width: 400px;
+  max-width: 100%;
+  padding: 20px;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-cart.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#sidebar-cart span#close-cart {
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  align-self: flex-end;
+}
+
+#sidebar-cart h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#cart-total {
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+#sidebar-cart button {
+  background-color: #7300ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#sidebar-cart button:hover {
+  background-color: #00ffcc;
+  color: black;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a2e;
+  color: #555;
+}
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburguer-slider {
+    flex-direction: column;
+  }
+
+  header .cart-button {
+    top: 20px;
+    right: 10px;
+  }
+}

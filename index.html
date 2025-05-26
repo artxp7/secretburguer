@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secret Burguer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Secret Burguer</h1>
+    <p>Explosão de sabor no seu delivery!</p>
+    <button id="open-cart" class="cart-button">🛒 Carrinho</button>
+  </header>
+
+  <!-- Slider de Hambúrgueres -->
+  <div class="hamburguer-slider">
+    <button class="arrow left" onclick="prevBurger()">&#10094;</button>
+    <div class="burger-card" id="burgerCard">
+      <img src="img/burguer1.jpg" alt="Cheddar Bacon">
+      <h3>Cheddar Bacon</h3>
+      <p>R$ 25,00</p>
+    </div>
+
+    <button class="arrow right" onclick="nextBurger()">&#10095;</button>
+  </div>
+
+  <!-- Cardápio -->
+  <main class="menu-container">
+    <div class="card">
+      <img src="img/burguer1.jpg" alt="Smash Burguer" />
+      <h2>cheddar com bancon</h2>
+      <p>Pão brioche, 2 smash, cheddar e bacon.</p>
+      <span data-price="24.90">R$ 24,90</span>
+      <button onclick="addToCart('Smash Burguer', 24.90)">Adicionar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/porcao1.jpg" alt="porcao" />
+      <h2>porçao de fritas</h2>
+      <p>fritas(200g), tiras de bancon e cheddar.</p>
+      <span data-price="21.90">R$ 21,90</span>
+      <button onclick="addToCart('Strogonoff', 21.90)">Adicionar</button>
+    </div>
+
+    <div class="card">
+      <img src="img/porcaocasal.jpg" alt="porcaocasal" />
+      <h2>apaixonados</h2>
+      <p>2 smash. porção de fritas, cebolas e tiras de frango</p>
+      <span data-price="26.90">R$ 26,90</span>
+      <button onclick="addToCart('Parmegiana', 26.90)">Adicionar</button>
+    </div>
+  </main>
+
+  <!-- Carrinho Sidebar -->
+  <div id="sidebar-cart">
+    <div class="sidebar-cart-content">
+      <span id="close-cart">&times;</span>
+      <h3>Carrinho de Compras</h3>
+      <ul id="cart-items"></ul>
+      <p>Subtotal: R$ <span id="cart-total">0.00</span></p>
+      <button onclick="sendOrder()">Finalizar Pedido</button>
+    </div>
+  </div>
+
+  <div class="shadow-cart"></div>
+
+  <footer>
+    <p>© 2025 Secret Burguer - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
