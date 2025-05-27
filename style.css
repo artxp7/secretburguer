@@ -79,7 +79,7 @@ header .cart-button:hover {
 .arrow {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #FFB84D;
   cursor: pointer;
   transition: transform 0.8s;
