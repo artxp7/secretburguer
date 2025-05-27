@@ -6,17 +6,17 @@ const burgers = [
   {
     name: "Cheddar Bacon",
     price: "R$ 25,00",
-    img: "img/burguer1.jpg"
+    img: "burguer4.jpg"
   },
   {
     name: "Smash",
     price: "R$ 22,00",
-    img: "img/burguer2.jpg"
+    img: "burguer2.jpg"
   },
   {
     name: "Duplo Cheese",
     price: "R$ 27,00",
-    img: "img/burguer3.jpg"
+    img: "burguer3.jpg"
   }
 ];
 
